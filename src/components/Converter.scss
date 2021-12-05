@@ -1,0 +1,84 @@
+$white: #ffffff;
+$lightblue: #18b5ca;
+
+@mixin props() {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+body {
+
+    height: 100vh;
+    align-items: center;
+    background-color: $lightblue;
+    @include props();
+
+    form {
+
+        @include props();
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        background-color: $white;
+
+        h3, input {
+
+            margin: 10px;
+            margin-left: 15px;
+
+        }
+
+        input {
+
+            width: 75px;
+            padding: 4px;
+            border-radius: 20px;
+            border: 1px solid $lightblue;
+            outline: none;
+            text-align: center;
+            color: black;
+            font-style: italic;
+            font-size: large;
+
+        }
+
+        input.btn-converter {
+
+            cursor: pointer;
+            width: 100px;
+            font-style: normal;
+            background-color: $lightblue;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 10pt;
+            padding: 5px;
+            margin-top: 15px;
+
+        }
+
+        .btn-converter:hover {
+
+                background-color: $white;
+                color: $lightblue;
+                border: 1px solid $lightblue;
+
+            }        
+
+        // It's remove arrows from number input element
+        input[type='number'] {
+            -moz-appearance:textfield;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+    }
+
+}
